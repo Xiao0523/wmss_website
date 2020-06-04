@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/mobile/HelloWorld'
-import Foo from '@/components/mobile/Foo'
+import Home from '@/components/mobile/Home'
 
 Vue.use(Router)
 
@@ -9,13 +8,8 @@ let router = new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-    {
-      path: '/foo',
-      name: 'Foo',
-      component: Foo
+      name: 'Home',
+      component: Home
     }
   ]
 })

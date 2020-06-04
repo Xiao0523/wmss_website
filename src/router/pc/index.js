@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/pc/HelloWorld'
-import Haha from '@/components/pc/Haha'
+import Home from '@/components/pc/Home'
 
 Vue.use(Router)
 
@@ -9,13 +8,8 @@ let router = new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-    {
-      path: '/haha',
-      name: 'Haha',
-      component: Haha
+      name: 'Home',
+      component: Home
     }
   ]
 })
