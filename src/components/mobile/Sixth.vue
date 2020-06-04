@@ -74,7 +74,7 @@
             <Button type="primary" size="large" long  @click="Verification">立即报名享优惠</Button>
           </FormItem>
            <FormItem >
-            <Button type="info" size="large" long ghost icon ="ios-call-outline">电话拨打</Button>
+            <Button type="info" size="large" long ghost icon ="ios-call-outline" @click="callPhone">电话拨打</Button>
            </FormItem>
           </Form>
         </div>
@@ -181,6 +181,9 @@ export default {
             codeUrl: ''
           }
         })
+    },
+    callPhone () {
+      window.location.href = 'tel://15773030067'
     }
   },
   // 生命周期 - 创建完成（可以访问当前this实例）
@@ -202,6 +205,7 @@ export default {
 <style lang='scss' scoped>
 //@import url(); 引入公共css类
 .sixth{
+    margin:auto  auto;
     width:375px;
     height:717px;
     background:linear-gradient(180deg,#099FFB 0%,#0325E5 100%);
@@ -314,6 +318,7 @@ export default {
   text-align: center;
 }
 .sixth_bottom{
+  margin:auto  auto;
   width:375px;
   height:57px;
   background:rgba(20,102,248,1);
