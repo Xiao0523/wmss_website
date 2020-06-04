@@ -207,7 +207,7 @@ export default {
 .sixth{
     margin:auto  auto;
     width:375px;
-    height:717px;
+    height:660px;
     background:linear-gradient(180deg,#099FFB 0%,#0325E5 100%);
     background: url(https://video.my51share.com/image/default/F345EDEE0A764CCD8CAFE2385FF137C2-6-2.png) center center  #099FFB ;
     position: relative;

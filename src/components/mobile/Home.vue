@@ -42,7 +42,7 @@ export default {
         slidesPerView: 1, // 设置slider容器能够同时显示的slides数量(carousel模式)。可以设置为数字（可为小数，小数不可loop），或者 'auto'则自动根据slides的宽度来设定数量。loop模式下如果设置为'auto'还需要设置另外一个参数loopedSlides。
         mousewheel: true, // 开启鼠标滚轮控制Swiper切换。可设置鼠标选项，默认值false
         mousewheelControl: true, // 同上
-        height: window.innerHeight, // 高度设置，占满设备高度
+        height: 717, // 高度设置，占满设备高度
         resistanceRatio: 0, // 抵抗率。边缘抵抗力的大小比例。值越小抵抗越大越难将slide拖离边缘，0时完全无法拖离。本业务需要
         observeParents: true, // 将observe应用于Swiper的父元素。当Swiper的父元素变化时，例如window.resize，Swiper更新
         pagination: {

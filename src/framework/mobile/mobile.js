@@ -8,6 +8,16 @@ import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 import '@/assets/css/anim.css'
 import VueLazyLoad from 'vue-lazyload'
+// import style
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+
+import 'swiper/css/swiper.css'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAwesomeSwiper)
+Vue.use(VueAwesomeSwiper)
+Vue.use(VueAxios, axios)
+
 Vue.use(iView)
 Vue.use(VueLazyLoad, {
   error: './static/error.png',

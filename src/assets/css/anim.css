@@ -193,3 +193,9 @@
     color: #ffb900;
   }
 }
+.ivu-modal-wrap{
+  left: 25px;
+}
+.ivu-btn>.ivu-icon+span, .ivu-btn>span+.ivu-icon{
+  font-size: 24px;
+}

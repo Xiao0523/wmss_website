@@ -196,7 +196,7 @@ export default {
 <style lang='scss' scoped>
 //@import url(); 引入公共css类
 .second{
-   margin:auto  auto;
+    margin:auto  auto;
     width:375px;
     height:717px;
    // background:linear-gradient(180deg,rgba(0,214,255,1) 0%,rgba(22,56,241,1) 100%);
