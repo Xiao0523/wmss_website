@@ -1,10 +1,3 @@
-# mobile-pc
-
-实践使用vue实现一个项目中移动端和PC端的切换
-
-# 项目解析
-
-想了解如何手写该项目？请戳 [我的博客](https://howaboutryze.github.io/take-sth-down/blog/vue/mobile-pc.html)
 
 # 构建步骤
 
