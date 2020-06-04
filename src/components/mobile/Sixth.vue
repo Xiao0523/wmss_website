@@ -74,7 +74,10 @@
             <Button type="primary" size="large" long  @click="Verification">立即报名享优惠</Button>
           </FormItem>
            <FormItem >
-            <Button type="info" size="large" long ghost icon ="ios-call-outline" @click="callPhone">电话拨打</Button>
+             <Button type="info" size="large" long ghost   @click="callPhone" >
+              <Icon type="ios-call" size = "30"/>
+                电话拨打
+            </Button>
            </FormItem>
           </Form>
         </div>

@@ -196,6 +196,9 @@
 .ivu-modal-wrap{
   left: 25px;
 }
-.ivu-btn>.ivu-icon+span, .ivu-btn>span+.ivu-icon{
-  font-size: 24px;
+.ivu-btn>span{
+  font-size: 18px;
+}
+.ivu-btn-info{
+  font-size: 18px;
 }
