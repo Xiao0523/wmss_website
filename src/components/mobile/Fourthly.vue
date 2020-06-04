@@ -70,10 +70,7 @@
             <Button type="primary" size="large" long  @click="Verification">立即报名享优惠</Button>
           </FormItem>
            <FormItem >
-            <Button type="info" size="large" long ghost   @click="callPhone" >
-              <Icon type="ios-call" size = "30"/>
-                电话拨打
-            </Button>
+            <Button type="info" size="large" long ghost icon ="ios-call-outline">电话拨打</Button>
            </FormItem>
           </Form>
         </div>
@@ -174,9 +171,6 @@ export default {
             codeUrl: ''
           }
         })
-    },
-    callPhone () {
-      window.location.href = 'tel://15773030067'
     }
   },
   // 生命周期 - 创建完成（可以访问当前this实例）
@@ -223,7 +217,7 @@ export default {
   font-size:28px;
   font-family:PingFangSC-Medium,PingFang SC;
   font-weight:500;
-  color:#FFFFFF;
+  color:rgba(51,51,51,1);
   line-height:40px;
   text-align: center;
   & b{
@@ -239,7 +233,7 @@ export default {
    font-size:15px;
    font-family:PingFangSC-Medium,PingFang SC;
    font-weight:500;
-   color:rgba(255,255,255,1);
+   color:rgba(153,153,153,1);
    line-height:22px;
 }
    .btn_wrap{

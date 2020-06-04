@@ -2,6 +2,7 @@
 <template>
 <div class="">
 <div class='sixth'>
+   <div class="bj"></div>
    <div class="sixth_wrap">
      <div class="btn_wrap">
        <div class="hq_reg_btn">
@@ -207,13 +208,18 @@ export default {
 </script>
 <style lang='scss' scoped>
 //@import url(); 引入公共css类
+.bj{
+    position: absolute;
+    margin:auto  auto;
+    width:375px;
+    height:610px;
+    background:linear-gradient(180deg,#099FFB 0%,#0325E5 100%);
+}
+
 .sixth{
     margin:auto  auto;
     width:375px;
-    height:660px;
-    background:linear-gradient(180deg,#099FFB 0%,#0325E5 100%);
-    background: url(https://video.my51share.com/image/default/F345EDEE0A764CCD8CAFE2385FF137C2-6-2.png) center center  #099FFB ;
-    position: relative;
+    height:610px;
 }
 .sixth_wrap{
     max-width: 414px;
@@ -223,6 +229,7 @@ export default {
     height: 100%;
     position: relative;
     overflow: hidden;
+    background: url(https://video.my51share.com/image/default/F345EDEE0A764CCD8CAFE2385FF137C2-6-2.png) center center ;
 }
 .group_sixth_layer{
   position: absolute;
