@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import First from '@/components/mobile/First'
 import Second from '@/components/mobile/Second'
 import Thirdly from '@/components/mobile/Thirdly'
@@ -61,6 +62,13 @@ export default {
     console.log('Current Swiper instance object', this.swiper)
     console.log('Current Swiper instance object', this.swiper.height)
     this.swiper.slideTo(-1, 1000, false)
+    axios.get('https://www.my51share.com/web/count/yishunerweizhzl')
+      .then((res) => {
+        console.log(res.data)// 请求的返回体
+      })
+      .catch((error) => {
+        console.log(error)// 异常
+      })
   }
 }
 </script>
