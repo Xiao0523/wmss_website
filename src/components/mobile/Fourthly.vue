@@ -217,7 +217,7 @@ export default {
   font-size:28px;
   font-family:PingFangSC-Medium,PingFang SC;
   font-weight:500;
-  color:rgba(51,51,51,1);
+  color:#FFFFFF;
   line-height:40px;
   text-align: center;
   & b{
@@ -233,7 +233,7 @@ export default {
    font-size:15px;
    font-family:PingFangSC-Medium,PingFang SC;
    font-weight:500;
-   color:rgba(153,153,153,1);
+   color:#FFFFFF;
    line-height:22px;
 }
    .btn_wrap{
