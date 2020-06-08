@@ -219,6 +219,7 @@ export default {
           this.dialogFormVisible = true
         })
       this.getSignUpNumeber()
+      this.getSignUpNumeber()
     },
     Verification () {
       if (!this.form.way) {

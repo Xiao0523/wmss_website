@@ -36,7 +36,7 @@
             <span style="font-size:16px;
                          font-family:PingFangSC-Medium,PingFang SC;
                          color:rgba(51,51,51,1);line-height:16px;">
-                         截止目前已有<b style="color:#FFB900">{{Number}}名</b>名用户报名</span>
+                         截止目前已有<b style="color:#FFB900">{{Numeber}}名</b>名用户报名</span>
         </p>
         <div>
         <Form :model="form">
@@ -136,6 +136,7 @@ export default {
           this.form.codeUrl = res.data.data
           this.modal = true
         })
+      this.getSignUpNumeber()
     },
     Verification () {
       if (!this.form.way) {

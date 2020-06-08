@@ -128,6 +128,7 @@ export default {
           this.form.codeUrl = res.data.data
           this.modal = true
         })
+      this.getSignUpNumeber()
     },
     Verification () {
       if (!this.form.way) {

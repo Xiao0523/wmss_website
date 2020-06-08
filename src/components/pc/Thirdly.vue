@@ -145,6 +145,7 @@ export default {
           this.form.codeUrl = res.data.data
           this.dialogFormVisible = true
         })
+      this.getSignUpNumeber()
     },
     Verification () {
       if (!this.form.way) {

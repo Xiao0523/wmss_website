@@ -14,8 +14,5 @@ export const getSignUpNumeber = {
         this.Numeber = res.data.data
       })
     }
-  },
-  created () {
-    this.getSignUpNumeber()
   }
 }
