@@ -150,7 +150,7 @@ export default {
       publicHeight: document.documentElement.clientHeight * (140 / 990),
       publicWidth: document.documentElement.clientWidth * (140 / 2560),
       wechatUrl:
-        'https://video.my51share.com/image/default/1CAA1E9369CC4B3FB2B0E850A73DD5B0-6-2.png',
+        'https://video.my51share.com/image/default/E48DD0C5BE5A4D0AAAE3DBECF31BA052-6-2.png',
       bottomHeight: document.documentElement.clientHeight * (70 / 990),
       dialogFormVisible: false,
       form: {

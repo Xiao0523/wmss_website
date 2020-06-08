@@ -104,7 +104,7 @@ export default {
     return {
       layerUrl: 'https://video.my51share.com/image/default/B6AF5AC850A34D1988932FF554D80DD3-6-2.png',
       publicUrl: 'https://video.my51share.com/image/default/CC6459F96E0249DE9CB885311BFD61EF-6-2.png',
-      wechatUrl: 'https://video.my51share.com/image/default/ECE4B0E0646C4427BCE5A86D7B49E7A0-6-2.png',
+      wechatUrl: 'https://video.my51share.com/image/default/4A2FE90B603B44CE8744C852A50BA8F8-6-2.png',
       modal: false,
       form: {
         name: '',
