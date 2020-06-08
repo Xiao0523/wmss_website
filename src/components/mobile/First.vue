@@ -36,7 +36,7 @@
             <span style="font-size:16px;
                          font-family:PingFangSC-Medium,PingFang SC;
                          color:rgba(51,51,51,1);line-height:16px;">
-                         截止目前已有<b style="color:#FFB900">5038名</b>名用户报名</span>
+                         截止目前已有<b style="color:#FFB900">{{Number}}名</b>名用户报名</span>
         </p>
         <div>
         <Form :model="form">
@@ -89,10 +89,11 @@
 // 这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 // 例如：import 《组件名称》 from '《组件路径》';
 import { getCode, patchConsultation } from '@/api/getCode'
-
+import { getSignUpNumeber } from '@/mixins/getNumeber'
 export default {
 // import引入的组件需要注入到对象中才能使用
   components: {},
+  mixins: [getSignUpNumeber],
   data () {
     // 这里存放数据
     return {

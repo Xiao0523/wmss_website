@@ -62,7 +62,7 @@
       custom-class="el-dialog_radius"
     >
       <div slot="title" class="dialog_title">
-        <span>截止目前为止已有<b>5038名</b>用户报名</span>
+        <span>截止目前为止已有<b>{{Numeber}}名</b>用户报名</span>
       </div>
       <el-form :model="form">
         <el-form-item>
@@ -111,9 +111,11 @@
 // 例如：import 《组件名称》 from '《组件路径》';
 import { getCode, patchConsultation } from '@/api/getCode'
 
+import { getSignUpNumeber } from '@/mixins/getNumeber'
 export default {
-  // import引入的组件需要注入到对象中才能使用
+// import引入的组件需要注入到对象中才能使用
   components: {},
+  mixins: [getSignUpNumeber],
   data () {
     // 这里存放数据
     return {
@@ -216,6 +218,7 @@ export default {
           this.form.codeUrl = res.data.data
           this.dialogFormVisible = true
         })
+      this.getSignUpNumeber()
     },
     Verification () {
       if (!this.form.way) {
