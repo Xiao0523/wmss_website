@@ -16,6 +16,7 @@
           :style="'height:' + logoHeight + 'px;' + 'width:' + logoWidth"
         />
       </div>
+      <!--
       <div
         class="group_first_title"
         :style="'height:' + titleHeight + 'px;' + 'width:' + titleWidth"
@@ -34,6 +35,17 @@
         全球<span :style="'font-size:' + fontSize * 2 + 'px;'">700万+</span
         >国际采购商
       </div>
+      -->
+       <div  class="group_first_subtitle"   :style="'font-size:' + fontSize + 'px;'">
+       <b :style="'font-size:' + fontSize * 1.5 + 'px;'">外贸推广巨献</b> <br>
+        <span :style="'font-size:' + fontSize * 2 + 'px;'">前10名 </span>抢购<br>
+        中国制造网 \ 环球资源网推广服务 <br>
+        赠送价值<span :style="'font-size:' + fontSize * 2 + 'px;'">80000元 </span> <br>
+        阿里巴巴国际站（金品城企）账户推广服务一年 <br>
+        活动仅限<span :style="'font-size:' + fontSize * 2 + 'px;'">三天 </span> <br>
+        活动时间：6月10日-6月12日<br>
+        本活动最终解释权归公司所有<br>
+       </div>
       <div
         class="group_first_layer"
         :style="'height:' + layerHeight + 'px;' + 'width:' + fullWidth + 'px;'"
@@ -300,7 +312,8 @@ export default {
   }
   &_subtitle {
     width: 100%;
-    top: 27.76%;
+    //top: 27.76%;
+    top:18%;
     text-align: center;
     position: absolute;
     font-family: PingFangSC-Regular, PingFang SC;
@@ -323,7 +336,8 @@ export default {
     position: absolute;
     float: left;
     text-align: center;
-    top: 38.35%;
+  //  top: 38.35%;
+    top: 64.35%;
     left: 45%;
     width: 184px;
     height: 50px;
