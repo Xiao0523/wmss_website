@@ -41,7 +41,7 @@
         <span :style="'font-size:' + fontSize * 2 + 'px;'">前10名 </span>抢购<br>
         中国制造网 \ 环球资源网推广服务 <br>
         赠送价值<span :style="'font-size:' + fontSize * 2 + 'px;'">80000元 </span> <br>
-        阿里巴巴国际站（金品城企）账户推广服务一年 <br>
+        阿里巴巴国际站（金品诚企）账户推广服务一年 <br>
         活动仅限<span :style="'font-size:' + fontSize * 2 + 'px;'">三天 </span> <br>
         活动时间：6月10日-6月12日<br>
         本活动最终解释权归公司所有<br>
