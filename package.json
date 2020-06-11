@@ -1,8 +1,8 @@
 {
-  "name": "mobile-pc",
+  "name": "wmss_website",
   "version": "1.0.0",
-  "description": "About mixin mobile&pc",
-  "author": "HowAboutRyze <lizhongwei157@163.com>",
+  "description": "Yishun 2d official website",
+  "author": "chenqi <525941084@qq.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

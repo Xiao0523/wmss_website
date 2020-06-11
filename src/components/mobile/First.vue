@@ -25,13 +25,13 @@
         赠送价值<b>80000元 </b> <br>
         阿里巴巴国际站（金品诚企）账户<br>
         推广服务一年 <br>
-        活动仅限<span :style="'font-size:' + fontSize * 2 + 'px;'"><b>三天</b> </span> <br>
+        活动仅限<span><b>三天</b> </span> <br>
         活动时间：6月10日-6月12日<br>
         本活动最终解释权归公司所有<br>
        </div>
 
      <div class="btn_wrap">
-       <div class="hq_reg_btn">
+       <div class="hq_reg_btn" >
           <div class="set_4_button2 raised hoverable " @click="obtain">
              <div class="anim"></div>
              <span>现在获取</span>
@@ -47,7 +47,7 @@
       </div>
    </div>
 
-    <Modal v-model="modal" draggable scrollable  width="330" class-name="vertical-center-modal">
+    <Modal v-model="modal" draggable scrollable  width="330" >
         <p slot="header" style="text-align:center">
             <span style="font-size:16px;
                          font-family:PingFangSC-Medium,PingFang SC;
@@ -90,7 +90,7 @@
             <Button type="primary" size="large" long  @click="Verification">立即报名享优惠</Button>
           </FormItem>
            <FormItem >
-            <Button type="info" size="large" long ghost   @click="callPhone" >
+             <Button type="info" size="large" long ghost   @click="callPhone" >
               <Icon type="ios-call" size = "30"/>
                 电话拨打
             </Button>
@@ -134,6 +134,7 @@ export default {
   // 方法集合
   methods: {
     obtain () {
+      debugger
       this.form.code = Math.ceil(Math.random() * 100000)
       this.form.code = this.form.code + 'YZM'
       getCode(this.form.code)
@@ -306,7 +307,7 @@ export default {
   font-size: 0.21rem;
   overflow: hidden;
   position: relative;
-  z-index: 0;
+  z-index: 2;
   cursor: pointer;
   border-radius: 0.35rem;
   text-align: center;
@@ -324,5 +325,6 @@ export default {
   position: absolute;
   text-align: center;
   bottom: 0;
+  z-index: 1;
 }
 </style>

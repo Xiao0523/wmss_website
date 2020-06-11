@@ -283,7 +283,7 @@ export default {
   font-size: 0.21rem;
   overflow: hidden;
   position: relative;
-  z-index: 0;
+  z-index: 3;
   cursor: pointer;
   border-radius: 0.35rem;
   text-align: center;
@@ -304,6 +304,7 @@ export default {
   z-index: 1;
 }
 .group_thirdly_background{
+    z-index: 2;
    position: absolute;
    bottom: 0;
    width: 375px;
