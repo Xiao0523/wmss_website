@@ -26,7 +26,6 @@
         />
       </div>
    </div>
-
     <Modal v-model="modal" draggable scrollable  width="330" >
         <p slot="header" style="text-align:center">
             <span style="font-size:16px;
@@ -50,16 +49,17 @@
             </Row>
           </FormItem>
           <FormItem>
-              <Input  v-model="form.way" placeholder="电话(请耐心等待咨询师联系)" size="large"  clearable  style="width: 100%" />
+              <Input  v-model="form.way" placeholder="手机号(请耐心等待咨询师联系)" size="large"  clearable  style="width: 100%" />
           </FormItem>
             <FormItem >
             <Row>
               <Col span="12">
-                  <Input v-model="form.validCode" placeholder="请输入验证码" size="large"  clearable />
+                  <Input v-model="form.validCode" placeholder="请输入短信验证码" size="large"  clearable />
               </Col>
-             <Col span="12">
-                  <img v-lazy="form.codeUrl" style="padding-left: 10%;" />
-             </Col>
+              <Col span="1" style="height:5px"/>
+              <Col span="11">
+                 <Button  type="primary" class="code-btn"   @click="send">获取验证码</Button>
+              </Col>
             </Row>
             </FormItem>
         </Form>
@@ -70,7 +70,10 @@
             <Button type="primary" size="large" long  @click="Verification">立即报名享优惠</Button>
           </FormItem>
            <FormItem >
-            <Button type="info" size="large" long ghost icon ="ios-call-outline">电话拨打</Button>
+             <Button type="info" size="large" long ghost   @click="callPhone" >
+              <Icon type="ios-call" size = "30"/>
+                电话拨打
+            </Button>
            </FormItem>
           </Form>
         </div>
@@ -81,26 +84,15 @@
 <script>
 // 这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 // 例如：import 《组件名称》 from '《组件路径》';
-import { getCode, patchConsultation } from '@/api/getCode'
-import { getSignUpNumeber } from '@/mixins/getNumeber'
+import { getMixins } from '@/mixins/mixinsMobile'
 export default {
 // import引入的组件需要注入到对象中才能使用
   components: {},
-  mixins: [getSignUpNumeber],
+  mixins: [getMixins],
   data () {
     // 这里存放数据
     return {
-      layerUrl: 'https://video.my51share.com/image/default/89405DEF904E4C55817CA128041B70F5-6-2.png',
-      modal: false,
-      form: {
-        name: '',
-        way: '',
-        detail: '现在获取',
-        sex: '0',
-        validCode: '',
-        code: '',
-        codeUrl: ''
-      }
+      layerUrl: 'https://video.my51share.com/image/default/89405DEF904E4C55817CA128041B70F5-6-2.png'
     }
   },
   // 监听属性 类似于data概念
@@ -109,71 +101,6 @@ export default {
   watch: {},
   // 方法集合
   methods: {
-    obtain () {
-      this.form.code = Math.ceil(Math.random() * 100000)
-      this.form.code = this.form.code + 'YZM'
-      getCode(this.form.code)
-        .then(res => {
-          if (res.data.code) {
-            return (
-              res.data.message &&
-              this.$message({
-                message: res.data.message,
-                type: 'warning',
-                duration: 3000
-              })
-            )
-          }
-          if (!res.data.data) return
-          this.form.codeUrl = res.data.data
-          this.modal = true
-        })
-      this.getSignUpNumeber()
-    },
-    Verification () {
-      if (!this.form.way) {
-        this.$Notice.warning({
-          title: '请先输入联系方式'
-        })
-        return
-      }
-      if (!this.form.name) {
-        this.$Notice.warning({
-          title: '请输入姓名'
-        })
-        return
-      }
-      if (!this.form.validCode) {
-        this.$Notice.warning({
-          title: '请输入验证码'
-        })
-        return
-      }
-      patchConsultation(this.form)
-        .then(res => {
-          if (res.data.code) {
-            return (
-              res.data.message &&
-                this.$Notice.warning({
-                  title: res.data.message
-                })
-            )
-          }
-          this.$Notice.success({
-            title: res.data.message
-          })
-          this.modal = false
-          this.form = {
-            name: '',
-            phone: '',
-            detail: '现在获取',
-            sex: '0',
-            validCode: '',
-            code: '',
-            codeUrl: ''
-          }
-        })
-    }
   },
   // 生命周期 - 创建完成（可以访问当前this实例）
   created () {

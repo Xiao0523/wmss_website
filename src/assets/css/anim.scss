@@ -202,3 +202,28 @@
 .ivu-btn-info{
   font-size: 18px;
 }
+.back{
+  height: 10px;
+}
+.el-button{
+  &--primary{
+    background:#409EFF;
+    border-color: #409EFF;
+    &:hover,
+    &:active,
+    &:focus{
+      background:#409EFF;
+      border-color: #409EFF;
+    }
+  }
+  &--default{
+    color:#409EFF;
+    border-color: #409EFF;
+    &:hover,
+    &:active,
+    &:focus{
+      color:#409EFF;
+      border-color: #409EFF;
+    }
+  }
+}

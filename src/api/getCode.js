@@ -10,4 +10,10 @@ function patchConsultation (data) {
 function getSignUp () {
   return request.get('api/signUp')
 }
-export { getCode, patchConsultation, getSignUp }
+function getPhoneCode (phone) {
+  return request.get(`api/code/${phone}`)
+}
+export { getCode,
+  patchConsultation,
+  getSignUp,
+  getPhoneCode}

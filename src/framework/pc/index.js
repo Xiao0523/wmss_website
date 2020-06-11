@@ -13,7 +13,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import '@/assets/css/anim.css'
+import '@/assets/css/anim.scss'
 import VueLazyLoad from 'vue-lazyload'
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueParticles)
@@ -24,7 +24,22 @@ Vue.use(VueLazyLoad, {
   loading: './static/loading.png'
 })
 Vue.config.productionTip = false
-
+// 错误提示
+Vue.prototype.$wran = function (msg) {
+  this.$message({
+    showClose: true,
+    message: msg,
+    type: 'error'
+  })
+}
+// 成功提示
+Vue.prototype.$success = function (msg) {
+  this.$message({
+    showClose: true,
+    message: msg,
+    type: 'success'
+  })
+}
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

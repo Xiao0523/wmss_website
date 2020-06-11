@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <el-dialog
+   <el-dialog
       :visible.sync="dialogFormVisible"
       width="20%"
       append-to-body
@@ -59,16 +59,17 @@
           ></el-input>
         </el-form-item>
         <el-form-item>
-        <el-row>
+         <el-row>
            <el-col :span="12">
           <el-input
             v-model="form.validCode"
-            placeholder="请输入验证码"
+            placeholder="请输入短信验证码"
           ></el-input>
            </el-col>
-           <el-col :span="12">
-          <img v-lazy="form.codeUrl" style="padding-left: 10%;" />
-           </el-col>
+          <el-col :span="1" class="back"></el-col>
+          <el-col :span="8">
+             <el-button class="code-btn"  @click="send">获取验证码</el-button>
+          </el-col>
          </el-row>
         </el-form-item>
       </el-form>
@@ -83,7 +84,6 @@
 <script>
 // 这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 // 例如：import 《组件名称》 from '《组件路径》';
-import { getCode, patchConsultation } from '@/api/getCode'
 import { getSignUpNumeber } from '@/mixins/getNumeber'
 export default {
 // import引入的组件需要注入到对象中才能使用
@@ -97,17 +97,7 @@ export default {
       layerUrl:
         'https://video.my51share.com/image/default/5CF749FBBC134D649C59B7BE2EE9D454-6-2.png',
       layerHeight: document.documentElement.clientHeight * (591 / 990),
-      layerWidth: document.documentElement.clientHeight * (828 / 990),
-      dialogFormVisible: false,
-      form: {
-        name: '',
-        way: '',
-        detail: '现在获取',
-        sex: '0',
-        validCode: '',
-        code: '',
-        codeUrl: ''
-      }
+      layerWidth: document.documentElement.clientHeight * (828 / 990)
     }
   },
   // 监听属性 类似于data概念
@@ -128,74 +118,6 @@ export default {
           that.layerWidth = window.fullHeight * (828 / 990)
         })()
       }
-    },
-    obtain () {
-      this.form.code = Math.ceil(Math.random() * 100000)
-      this.form.code = this.form.code + 'YZM'
-      getCode(this.form.code)
-        .then(res => {
-          if (res.data.code) {
-            return (
-              res.data.message &&
-              this.$message({
-                message: res.data.message,
-                type: 'warning',
-                duration: 3000
-              })
-            )
-          }
-          if (!res.data.data) return
-          this.form.codeUrl = res.data.data
-          this.dialogFormVisible = true
-        })
-      this.getSignUpNumeber()
-    },
-    Verification () {
-      if (!this.form.way) {
-        this.$message({
-          message: '请先输入联系方式',
-          type: 'warning',
-          duration: 5000
-        })
-        return
-      }
-      if (!this.form.name) {
-        this.$message({
-          message: '请先输入姓',
-          type: 'warning',
-          duration: 5000
-        })
-        return
-      }
-      patchConsultation(this.form)
-        .then(res => {
-          if (res.data.code) {
-            return (
-              res.data.message &&
-              this.$message({
-                message: res.data.message,
-                type: 'warning',
-                duration: 3000
-              })
-            )
-          }
-
-          this.$message({
-            message: res.data.message,
-            type: 'success',
-            duration: 4000
-          })
-          this.dialogFormVisible = false
-          this.form = {
-            name: '',
-            phone: '',
-            detail: '现在获取',
-            sex: '0',
-            validCode: '',
-            code: '',
-            codeUrl: ''
-          }
-        })
     }
   },
   // 生命周期 - 创建完成（可以访问当前this实例）

@@ -6,7 +6,7 @@ import router from '../../router/mobile'
 import '../../assets/style/base.css'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
-import '@/assets/css/anim.css'
+import '@/assets/css/anim.scss'
 import VueLazyLoad from 'vue-lazyload'
 // import style
 import VueAwesomeSwiper from 'vue-awesome-swiper'
