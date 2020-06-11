@@ -5,7 +5,7 @@
     <div class="group_first_logo">
         <img :src="logoUrl">
     </div>
-    <!--
+
      <div
         class="group_first_title"
       >
@@ -15,20 +15,6 @@
      <div  class="group_first_subtitle">
        全球<b>700万+</b>国际采购商
      </div>
-     -->
-       <div  class="group_first_title">
-          外贸推广巨献<br>
-          </div>
-       <div  class="group_first_subtitle">
-       <b>前10名 </b>抢购<br>
-        中国制造网 \ 环球资源网推广服务 <br>
-        赠送价值<b>80000元 </b> <br>
-        阿里巴巴国际站（金品诚企）账户<br>
-        推广服务一年 <br>
-        活动仅限<span><b>三天</b> </span> <br>
-        活动时间：6月10日-6月12日<br>
-        本活动最终解释权归公司所有<br>
-       </div>
 
      <div class="btn_wrap">
        <div class="hq_reg_btn" >
@@ -180,8 +166,7 @@ export default {
 }
 .group_first_subtitle{
    position:absolute;
-   //top:282px;
-   top:220px;
+   top:282px;
    width: 100%;
    text-align: center;
    height:56px;
@@ -198,8 +183,7 @@ export default {
 }
    .btn_wrap{
      position: absolute;
-    // top:367px;
-     top:450px;
+     top:367px;
      width: 100%;
      text-align: center;
    }
