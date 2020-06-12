@@ -6,7 +6,7 @@
         class="group_second_title"
       >
      针对不同的企业和用户<br>
-      <b>免费</b>提供对应的外贸
+      <b>免费</b>提供对应的外贸询盘
      </div>
      <div  class="group_second_subtitle">
         免费提供！免费提供！免费提供！
