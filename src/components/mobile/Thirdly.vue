@@ -5,10 +5,12 @@
      <div
         class="group_thirdly_title"
       >
-      让客户无法忽视你的<b>存在</b>
+      最低<b>9800元/年</b>起,
+      获取价值<b>超20万</b>的广告投放效果
      </div>
      <div  class="group_thirdly_subtitle">
-        谷歌推广+个人商务社交站+企业全球站=绝配
+       让你轻松拥有多个国际站推广账号<br>
+       并为你配备专业的优化及运营团队
      </div>
      <div class="btn_wrap">
        <div class="hq_reg_btn">
@@ -149,7 +151,7 @@ export default {
 }
 .group_thirdly_title{
   position:absolute;
-  top:80px;
+  top:40px;
   width: 100%;
   height:40px;
   font-size:28px;
@@ -176,7 +178,7 @@ export default {
 }
    .btn_wrap{
      position: absolute;
-     top:165px;
+     top:180px;
      width: 100%;
      text-align: center;
    }

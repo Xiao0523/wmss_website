@@ -4,9 +4,13 @@
     class="group_thirdly"
     :style="'height:' + fullHeight + 'px; ' + 'width:' + fullWidth + 'px;'"
   >
-    <div class="group_thirdly_title">让客户无法忽视你的<span>存在</span></div>
+    <div class="group_thirdly_title">
+    最低<b>9800元/年</b>起<br>
+   获取价值<b>超20万</b>的广告投放效果
+    </div>
     <div class="group_thirly_subtitle">
-      谷歌推广+个人商务社交站+企业全球站=绝配
+    让你轻松拥有多个国际站推广账号<br>
+    并为你配备专业的优化及运营团队
     </div>
     <div class="hq_reg_btn">
       <div class="set_4_button2 raised hoverable " @click="obtain">
@@ -153,28 +157,35 @@ export default {
 }
 .group_thirdly_title {
   position: absolute;
-  left: 20.34%;
-  top: 9.11%;
+  left: 13.34%;
+  top: 8.11%;
   font-size: 36px;
+  width: 30%;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: rgba(51, 51, 51, 1);
   line-height: 50px;
+  text-align: center;
+   & b {
+    color: #ffb900;
+  }
 }
 .group_thirly_subtitle {
   position: absolute;
-  left: 20.34%;
-  top: 15.68%;
+  left: 13.34%;
+  top: 19.68%;
+  width: 30%;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   font-size: 20px;
   color: rgba(153, 153, 153, 1);
   line-height: 28px;
+   text-align: center;
 }
 .hq_reg_btn {
   position: absolute;
   left: 20.34%;
-  top: 20.53%;
+  top: 27.53%;
   width: 118px;
   height: 50px;
   border-radius: 6px;
