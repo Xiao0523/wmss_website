@@ -138,7 +138,14 @@ export default {
         document.documentElement.clientHeight * (704 / 990) * (1613 / 704),
 
       btnHeight: document.documentElement.clientHeight * (50 / 990),
-      btnWidth: document.documentElement.clientWidth * (184 / 2560)
+      btnWidth: document.documentElement.clientWidth * (184 / 2560),
+      form: {
+        name: '',
+        way: '',
+        sex: '0',
+        validCode: '',
+        source: 1
+      }
     }
   },
   // 监听属性 类似于data概念

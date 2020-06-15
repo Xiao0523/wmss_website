@@ -100,7 +100,14 @@ export default {
     // 这里存放数据
     return {
       logoUrl: 'https://video.my51share.com/image/default/99BA03966B8949D684FE81F285CBA9F8-6-2.png',
-      layerUrl: 'https://video.my51share.com/image/default/46DB9BF27ED0469FAE5200E68A006ED1-6-2.png'
+      layerUrl: 'https://video.my51share.com/image/default/46DB9BF27ED0469FAE5200E68A006ED1-6-2.png',
+      form: {
+        name: '',
+        way: '',
+        sex: '0',
+        validCode: '',
+        source: 1
+      }
     }
   },
   // 监听属性 类似于data概念

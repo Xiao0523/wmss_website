@@ -94,7 +94,14 @@ export default {
   data () {
     // 这里存放数据
     return {
-      layerUrl: 'https://video.my51share.com/image/default/670D99D76F04405EA4687877FC0CFA99-6-2.png'
+      layerUrl: 'https://video.my51share.com/image/default/670D99D76F04405EA4687877FC0CFA99-6-2.png',
+      form: {
+        name: '',
+        way: '',
+        sex: '0',
+        validCode: '',
+        source: 5
+      }
     }
   },
   // 监听属性 类似于data概念

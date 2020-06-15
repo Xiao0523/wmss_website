@@ -155,11 +155,9 @@ export default {
       form: {
         name: '',
         way: '',
-        detail: '现在获取',
         sex: '0',
         validCode: '',
-        code: '',
-        codeUrl: ''
+        source: 6
       }
     }
   },

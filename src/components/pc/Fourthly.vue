@@ -97,7 +97,14 @@ export default {
       layerUrl:
         'https://video.my51share.com/image/default/5CF749FBBC134D649C59B7BE2EE9D454-6-2.png',
       layerHeight: document.documentElement.clientHeight * (591 / 990),
-      layerWidth: document.documentElement.clientHeight * (828 / 990)
+      layerWidth: document.documentElement.clientHeight * (828 / 990),
+      form: {
+        name: '',
+        way: '',
+        sex: '0',
+        validCode: '',
+        source: 4
+      }
     }
   },
   // 监听属性 类似于data概念

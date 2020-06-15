@@ -104,8 +104,14 @@ export default {
     return {
       layerUrl: 'https://video.my51share.com/image/default/B6AF5AC850A34D1988932FF554D80DD3-6-2.png',
       publicUrl: 'https://video.my51share.com/image/default/CC6459F96E0249DE9CB885311BFD61EF-6-2.png',
-      wechatUrl: 'https://video.my51share.com/image/default/4A2FE90B603B44CE8744C852A50BA8F8-6-2.png'
-
+      wechatUrl: 'https://video.my51share.com/image/default/4A2FE90B603B44CE8744C852A50BA8F8-6-2.png',
+      form: {
+        name: '',
+        way: '',
+        sex: '0',
+        validCode: '',
+        source: 6
+      }
     }
   },
   // 监听属性 类似于data概念
