@@ -29,56 +29,16 @@
         :style="'height:' + layerHeight + 'px;' + 'width:' + layerWidth + 'px;'"
       />
     </div>
-     <el-dialog
-      :visible.sync="dialogFormVisible"
-      width="20%"
-      append-to-body
-      center
-      custom-class="el-dialog_radius"
-    >
-      <div slot="title" class="dialog_title">
-        <span>截止目前为止已有<b>{{Numeber}}名</b>用户报名</span>
-      </div>
-      <el-form :model="form">
-        <el-form-item>
-          <el-input
-            v-model="form.name"
-            autocomplete="off"
-            placeholder="姓(已加密)"
-            style="width:50%"
-          ></el-input>
-          <el-radio v-model="form.sex" label="0" style="padding-left: 5%;"
-            >先生</el-radio
-          >
-          <el-radio v-model="form.sex" label="1">女士</el-radio>
-        </el-form-item>
-        <el-form-item>
-          <el-input
-            v-model="form.way"
-            autocomplete="off"
-            placeholder="电话(请耐心等待咨询师联系)"
-          ></el-input>
-        </el-form-item>
-        <el-form-item>
-         <el-row>
-           <el-col :span="12">
-          <el-input
-            v-model="form.validCode"
-            placeholder="请输入短信验证码"
-          ></el-input>
-           </el-col>
-          <el-col :span="1" class="back"></el-col>
-          <el-col :span="8">
-             <el-button class="code-btn"  @click="send">获取验证码</el-button>
-          </el-col>
-         </el-row>
-        </el-form-item>
-      </el-form>
-      <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogFormVisible = false">取 消</el-button>
-        <el-button type="primary" @click="Verification">确 定</el-button>
-      </div>
-    </el-dialog>
+    <Dialog
+      :dialogFormVisible="dialogFormVisible"
+      :form ="form"
+      :Numeber = "Numeber"
+      @send = "send"
+      @cancelFn ="dialogFormVisible = false"
+      @Verification ="Verification"
+      @close = "dialogFormVisible = false"
+     >
+     </Dialog>
   </div>
 </template>
 
@@ -86,9 +46,10 @@
 // 这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 // 例如：import 《组件名称》 from '《组件路径》';
 import { getSignUpNumeber } from '@/mixins/getNumeber'
+import Dialog from '@/components/pc/Dialog'
 export default {
 // import引入的组件需要注入到对象中才能使用
-  components: {},
+  components: {Dialog},
   mixins: [getSignUpNumeber],
   data () {
     // 这里存放数据

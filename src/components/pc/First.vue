@@ -32,7 +32,7 @@
         class="group_first_subtitle"
         :style="'font-size:' + fontSize + 'px;'"
       >
-        全球<span :style="'font-size:' + fontSize * 2 + 'px;'">700万+</span
+        全球<span :style="'font-size:' + fontSize * 2 + 'px;'" >700万+</span
         >国际采购商
       </div>
 
@@ -56,6 +56,7 @@
           </div>
       </div>
     </div>
+    <!--
     <el-dialog
       :visible.sync="dialogFormVisible"
       width="20%"
@@ -106,16 +107,27 @@
         <el-button type="primary" @click="Verification">确 定</el-button>
       </div>
     </el-dialog>
+    -->
+     <Dialog
+      :dialogFormVisible="dialogFormVisible"
+      :form ="form"
+      :Numeber = "Numeber"
+      @send = "send"
+      @cancelFn ="dialogFormVisible = false"
+      @Verification ="Verification"
+      @close = "dialogFormVisible = false"
+     >
+     </Dialog>
   </div>
 </template>
-
 <script>
 // 这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 // 例如：import 《组件名称》 from '《组件路径》';
 import { getSignUpNumeber } from '@/mixins/getNumeber'
+import Dialog from '@/components/pc/Dialog'
 export default {
 // import引入的组件需要注入到对象中才能使用
-  components: {},
+  components: {Dialog},
   mixins: [getSignUpNumeber],
   data () {
     // 这里存放数据
@@ -289,196 +301,6 @@ export default {
   -o-transition: all 0.1s;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
-}
-
-.anim {
-  -moz-transform: translateY(-50%) translateX(-50%);
-  -ms-transform: translateY(-50%) translateX(-50%);
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  transform: translateY(-50%) translateX(-50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-}
-
-.anim:before {
-  position: relative;
-  content: "";
-  display: block;
-  margin-top: 100%;
-}
-
-.anim:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 50%;
-}
-
-.hoverable .anim {
-  -moz-animation: anim-out 0.75s;
-  -webkit-animation: anim-out 0.75s;
-  animation: anim-out 0.75s;
-}
-
-.hoverable .anim:after {
-  -moz-animation: anim-out-pseudo 0.75s;
-  -webkit-animation: anim-out-pseudo 0.75s;
-  animation: anim-out-pseudo 0.75s;
-}
-
-.hoverable .anim,
-.hoverable .anim:after {
-  animation-iteration-count: infinite;
-  animation-duration: 1.3s;
-}
-
-@-webkit-keyframes anim-in {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@-moz-keyframes anim-in {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@-ms-keyframes anim-in {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes anim-in {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes anim-in-pseudo {
-  0% {
-    background: rgba(255, 206, 182, 0.35);
-  }
-  100% {
-    background: transparent;
-  }
-}
-
-@-moz-keyframes anim-in-pseudo {
-  0% {
-    background: rgba(255, 206, 182, 0.35);
-  }
-  100% {
-    background: transparent;
-  }
-}
-
-@-ms-keyframes anim-in-pseudo {
-  0% {
-    background: rgba(255, 206, 182, 0.35);
-  }
-  100% {
-    background: transparent;
-  }
-}
-
-@keyframes anim-in-pseudo {
-  0% {
-    background: rgba(255, 206, 182, 0.35);
-  }
-  100% {
-    background: transparent;
-  }
-}
-
-@-webkit-keyframes anim-out {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@-moz-keyframes anim-out {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@-ms-keyframes anim-out {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes anim-out {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes anim-out-pseudo {
-  0% {
-    background: rgba(255, 206, 182, 0.35);
-  }
-  100% {
-    background: transparent;
-  }
-}
-
-@-moz-keyframes anim-out-pseudo {
-  0% {
-    background: rgba(255, 206, 182, 0.35);
-  }
-  100% {
-    background: transparent;
-  }
-}
-
-@-ms-keyframes anim-out-pseudo {
-  0% {
-    background: rgba(255, 206, 182, 0.35);
-  }
-  100% {
-    background: transparent;
-  }
-}
-
-@keyframes anim-out-pseudo {
-  0% {
-    background: rgba(255, 206, 182, 0.35);
-  }
-  100% {
-    background: transparent;
-  }
 }
 .dialog_title {
   font-size: 20px;

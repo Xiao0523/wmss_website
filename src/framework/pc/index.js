@@ -13,6 +13,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import '@/assets/css/aos.css'
 import '@/assets/css/anim.scss'
 import VueLazyLoad from 'vue-lazyload'
 Vue.use(VueAwesomeSwiper)
