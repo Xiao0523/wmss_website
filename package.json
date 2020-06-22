@@ -12,6 +12,7 @@
     "publish": "node build/build.js && git add . && git commit -m 'publish' && git push origin master"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "axios": "^0.19.2",
     "element-ui": "^2.13.2",
     "iview": "^3.5.4",

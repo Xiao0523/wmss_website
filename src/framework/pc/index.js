@@ -16,6 +16,17 @@ import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/css/aos.css'
 import '@/assets/css/anim.scss'
 import VueLazyLoad from 'vue-lazyload'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+Vue.use(
+  AOS.init({
+    disable: function () {
+      var maxWidth = 1024
+      return window.innerWidth < maxWidth
+    },
+    once: true
+  })
+)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueParticles)
 Vue.use(VueAxios, axios) /* 引入公共样式 */

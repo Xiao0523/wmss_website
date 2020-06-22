@@ -8,6 +8,7 @@
       <div
         class="group_first_logo"
         :style="'height:' + logoHeight + 'px;' + 'width:100%'"
+         data-aos-duration="1000" data-aos-delay="500" data-aos="fade-right"
       >
         <img
           :src="logoUrl"
@@ -20,6 +21,7 @@
       <div
         class="group_first_title"
         :style="'height:' + titleHeight + 'px;' + 'width:' + titleWidth"
+          data-aos-duration="1000" data-aos-delay="500" data-aos="fade-up"
       >
         <img
           :src="titleUrl"
@@ -31,6 +33,7 @@
       <div
         class="group_first_subtitle"
         :style="'font-size:' + fontSize + 'px;'"
+        data-aos-duration="1000" data-aos-delay="500" data-aos="fade-up"
       >
         全球<span :style="'font-size:' + fontSize * 2 + 'px;'" >700万+</span
         >国际采购商
@@ -49,7 +52,9 @@
           "
         />
       </div>
-      <div class="hq_reg_btn">
+      <div class="hq_reg_btn"
+        data-aos-duration="1000" data-aos-delay="1000" data-aos="fade-right"
+      >
         <div class="set_4_button2 raised hoverable " @click="obtain">
           <div class="anim"></div>
           <span>现在获取</span>

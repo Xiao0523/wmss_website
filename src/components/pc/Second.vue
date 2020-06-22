@@ -15,7 +15,8 @@
         :style="'height:' + layerHeight + 'px;' + 'width:' + layerWidth + 'px;'"
       />
     </div>
-    <div class="group_second_title">
+    <div class="group_second_title"
+    >
       提升外贸询盘量<span>3倍</span>以上
     </div>
     <div class="group_second_subtitle">
