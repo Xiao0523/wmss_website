@@ -21,7 +21,7 @@
                         <Radio label="0">先生</Radio>
                         <Radio label="1">女士</Radio>
                </RadioGroup>
-             </Col>y
+             </Col>
             </Row>
           </FormItem>
           <FormItem>
