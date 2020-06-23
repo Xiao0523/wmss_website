@@ -7,6 +7,7 @@
     <div
       class="group_second_layer"
       :style="'height:' + layerHeight + 'px;' + 'width:' + layerWidth + 'px;'"
+
     >
       <img
         :src="layerUrl"

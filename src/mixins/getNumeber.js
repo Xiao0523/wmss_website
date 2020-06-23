@@ -3,12 +3,6 @@ import {getSignUp, getPhoneCode, patchConsultation} from '@/api/getCode'
 export const getSignUpNumeber = {
   data () {
     return {
-      form: {
-        name: '',
-        way: '',
-        sex: '0',
-        validCode: ''
-      },
       Numeber: 5038,
       dialogFormVisible: false
     }

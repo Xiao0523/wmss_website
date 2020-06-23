@@ -17,14 +17,13 @@ import VueAxios from 'vue-axios'
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueAxios, axios)
-
 Vue.use(iView)
 Vue.use(VueLazyLoad, {
   error: './static/error.png',
   loading: './static/loading.png'
 })
-Vue.config.productionTip = false
 
+Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
