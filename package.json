@@ -16,7 +16,7 @@
     "axios": "^0.19.2",
     "element-ui": "^2.13.2",
     "iview": "^3.5.4",
-    "swiper": "^5.4.1",
+    "swiper": "^6.5.1",
     "vue": "^2.5.2",
     "vue-awesome-swiper": "^4.1.1",
     "vue-axios": "^2.1.5",
